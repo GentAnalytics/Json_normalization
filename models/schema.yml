@@ -1,0 +1,6 @@
+
+version: 2
+
+models:
+    - name: Appstoredata
+      description: "model with the data of appstore"
