@@ -4,3 +4,22 @@ version: 2
 models:
     - name: Appstoredata
       description: "model with the data of appstore"
+      columns:
+      - name: Device
+        description: "unwkonw"
+      - name: DateofDownload
+        description: "unwkonw"
+      - name: sku
+        description: "unwkonw"
+      - name: Currency
+        description: "unwkonw"
+      - name: Version
+        description: "unwkonw"
+      - name: Country
+        description: "unwkonw"
+      - name: platforms
+        description: "unwkonw"
+       
+        
+        
+
