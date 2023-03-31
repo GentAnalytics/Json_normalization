@@ -7,6 +7,9 @@ version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
+
+project: "Customer_churn"
+dataset: "ga4_obfuscated_sample_ecommerce"
 profile: 'normalization_json'
 
 
