@@ -2,23 +2,18 @@
 version: 2
 
 models:
-    - name: Appstoredata
-      description: model with the data of appstore
+    - name: Json_normalization
+      description: model with the data of GA4 customer
       columns:
-      - name: Device
+      - name: date
         description: unwkonw
-      - name: DateofDownload
+      - name: sessions
         description: unwkonw
-      - name: sku
+      - name: uuid
         description: unwkonw
-      - name: Currency
+      - name: User_id
         description: unwkonw
-      - name: Versio
-        description: unwkonw
-      - name: Country
-        description: unwkonw
-      - name: platforms
-        description: unwkonw
+      
        
         
         
