@@ -14,7 +14,10 @@ select
 JSON_VALUE(data_json_format.date) date,
 JSON_VALUE(data_json_format.sessions) sessions,
 JSON_VALUE(data_json_format.uuid) uuid,
-JSON_VALUE(data_json_format, '$.customUser:user_id') AS User_id
+JSON_VALUE(data_json_format, '$.customUser:user_id') AS User_id,
+JSON_VALUE(data_json_format, '$.customUser:gender') AS User_gender,
+JSON_VALUE(data_json_format, '$.customUser:user_age') AS User_age
+
 
 
 from data_json
