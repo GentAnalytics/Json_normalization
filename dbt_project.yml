@@ -11,7 +11,7 @@ profile: 'normalization_json'
 vars:
   project: "play-big-query"
   dataset: "Customer_churn"
-  location: "europe_west1"
+  location: "europe-west1"
 
 
 
