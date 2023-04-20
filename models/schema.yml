@@ -1,25 +1,35 @@
-
 version: 2
 
 models:
-    - name: Appstoredata
-      description: model with the data of appstore
+    - name: Json_normalization
+      description: model with the data of GA4 customer
       columns:
-      - name: Device
-        description: unwkonw
-      - name: DateofDownload
-        description: unwkonw
-      - name: sku
-        description: unwkonw
-      - name: Currency
-        description: unwkonw
-      - name: Versio
-        description: unwkonw
-      - name: Country
-        description: unwkonw
-      - name: platforms
-        description: unwkonw
-       
-        
+      - name: date
+        description: unknown
+      - name: sessions
+        description: unknown
+      - name: program_variant
+        description: unknown
+      - name: pageTitle
+        description: unknown
+      - name: program_name
+        description: unknown
+      - name: eventName
+        description: unknown
+      - name: video_duration
+        description : unknown
+      - name: eventName
+        description: unknown
+      - name: video_duration
+        description: unknown
+      - name: uuid
+        description: unknown
+      - name: property_id
+        description: unknown
+      - name: user_id
+        description: unknown
+
+
+      
         
 
