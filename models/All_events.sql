@@ -14,9 +14,8 @@ select
 
 PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date,
 JSON_VALUE(data_json_format,'$.customUser:user_id') AS id,
-JSON_VALUE(data_json_format.activeUsers) activeUsers,
+JSON_VALUE(data_json_format.sessions) sessions,
 JSON_VALUE(data_json_format.hour) hour,
-JSON_VALUE(data_json_format.pageTitle) pageTitle,
 JSON_VALUE(data_json_format.eventName) eventName,
 JSON_VALUE(data_json_format, '$.customEvent:program_name') AS program_name,
 JSON_VALUE(data_json_format, '$.customEvent:program_variant') AS program_variant,
