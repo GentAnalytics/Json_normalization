@@ -8,10 +8,7 @@ with data_json as (
 
 )
 
-[{"name": "Allevents", "dimensions": [ "date","hour","eventName","customUser:user_id", "pageTitle","customEvent:program_name","customEvent:program_variant"], "metrics": ["sessions"] }]
 
-select
-PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date,
 JSON_VALUE(data_json_format.hour) hour,
 JSON_VALUE(data_json_format.eventName) eventName,
 JSON_VALUE(data_json_format,'$.customUser:user_id') AS userid,
