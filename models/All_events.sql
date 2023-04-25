@@ -18,7 +18,7 @@ JSON_VALUE(data_json_format,'$.customUser:user_id') AS userid,
 JSON_VALUE(data_json_format.pageTitle) pageTitle,
 JSON_VALUE(data_json_format, '$.customEvent:program_name') AS program_name,
 JSON_VALUE(data_json_format, '$.customEvent:program_variant') AS program_variant,
-JSON_VALUE(data_json_format.sessions) sessions,
+JSON_VALUE(data_json_format.activeUsers) activeusers,
 JSON_VALUE(data_json_format.property_id) property_id,
 JSON_VALUE(data_json_format.uuid) uuid
 from data_json
