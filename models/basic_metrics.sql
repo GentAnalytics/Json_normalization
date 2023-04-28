@@ -8,13 +8,13 @@ with data_json as (
 
 )
 
-
-
 select
 
 PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date,
 JSON_VALUE(data_json_format.sessions) sessions,
 JSON_VALUE(data_json_format.totalUsers) totalUsers,
+JSON_VALUE(data_json_format.activeUsers) activeUsers,
+JSON_VALUE(data_json_format.newUsers) newUsers,
 JSON_VALUE(data_json_format.uuid) uuid,
 JSON_VALUE(data_json_format.property_id) property_id
 from data_json
