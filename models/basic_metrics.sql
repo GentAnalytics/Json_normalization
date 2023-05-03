@@ -11,6 +11,7 @@ with data_json as (
 select
 
 PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date,
+JSON_VALUE(data_json_format.streamName) streamName,
 JSON_VALUE(data_json_format.sessions) sessions,
 JSON_VALUE(data_json_format.totalUsers) totalUsers,
 JSON_VALUE(data_json_format.activeUsers) activeUsers,
