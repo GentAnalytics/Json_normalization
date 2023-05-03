@@ -51,5 +51,3 @@ FROM first_part_of_data
 JOIN second_part_of_data
 ON first_part_of_data.date = second_part_of_data.date AND first_part_of_data.streamName = second_part_of_data.streamName;
 
-
-ON table1.column1 = table2.column1 AND table1.column2 = table2.column2
