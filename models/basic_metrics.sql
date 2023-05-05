@@ -49,5 +49,5 @@ FROM Export1._airbyte_raw_customer_retention,
 SELECT *
 FROM first_part_of_data
 JOIN second_part_of_data
-ON first_part_of_data.date = second_part_of_data.date AND first_part_of_data.streamName = second_part_of_data.streamName;
+ON first_part_of_data.date = second_part_of_data.date AND first_part_of_data.streamName = second_part_of_data.streamName
 
