@@ -1,4 +1,3 @@
-{{ config(materialized='table') }}
 
 with first_json as (
     SELECT _airbyte_data
