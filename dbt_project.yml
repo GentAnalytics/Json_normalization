@@ -55,6 +55,7 @@ vars:
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  appstoredata:
-    # Applies to all files under models/example/
-      materialized: table
+  ga4:
+    +materialized: view
+    marts:
+      +materialized: table
