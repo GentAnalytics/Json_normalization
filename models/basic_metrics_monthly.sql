@@ -18,7 +18,7 @@ second_json as (
 first_part_of_data as (
     select
 
-PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date,
+PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.month)) as month,
 JSON_VALUE(data_json_format.streamName) streamName,
 JSON_VALUE(data_json_format.sessions) sessions,
 JSON_VALUE(data_json_format.totalUsers) totalUsers,
@@ -31,7 +31,7 @@ from first_json
 
 second_part_of_data as (
     select
-PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date2,
+PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.month)) as month2,
 JSON_VALUE(data_json_format.streamName) streamName2,
 -- JSON_VALUE(data_json_format.newVsReturning) as User_type,
 JSON_VALUE(data_json_format.totalUsers) totalReturningUsers
@@ -55,5 +55,5 @@ newUsers,
 totalReturningUsers
 FROM first_part_of_data
 JOIN second_part_of_data
-ON first_part_of_data.date = second_part_of_data.date2 AND first_part_of_data.streamName = second_part_of_data.streamName2
+ON first_part_of_data.month = second_part_of_data.month2 AND first_part_of_data.streamName = second_part_of_data.streamName2
 
