@@ -33,8 +33,8 @@ second_part_of_data as (
     select
 PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date2,
 JSON_VALUE(data_json_format.streamName) streamName2,
-JSON_VALUE(data_json_format.newVsReturning) as User_type,
-JSON_VALUE(data_json_format.totalUsers) totalreturingUsers,
+-- JSON_VALUE(data_json_format.newVsReturning) as User_type,
+JSON_VALUE(data_json_format.totalUsers) totalreturingUsers
 -- JSON_VALUE(data_json_format.property_id) property_id,
 -- JSON_VALUE(data_json_format.uuid) uuid
 
