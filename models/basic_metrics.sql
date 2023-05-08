@@ -18,10 +18,10 @@ second_json as (
 first_part_of_data as (
     select
 
-PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date,
-JSON_VALUE(data_json_format.streamName) streamName,
+PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date1,
+JSON_VALUE(data_json_format.streamName) streamName1,
 JSON_VALUE(data_json_format.sessions) sessions,
-JSON_VALUE(data_json_format.totalUsers) totalUsers,
+JSON_VALUE(data_json_format.totalUsers) totalUsers1,
 JSON_VALUE(data_json_format.activeUsers) activeUsers,
 JSON_VALUE(data_json_format.newUsers) newUsers,
 -- JSON_VALUE(data_json_format.uuid) uuid,
@@ -31,10 +31,10 @@ from first_json
 
 second_part_of_data as (
     select
-PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date,
-JSON_VALUE(data_json_format.streamName) streamName,
+PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.date)) as date2,
+JSON_VALUE(data_json_format.streamName) streamName2,
 JSON_VALUE(data_json_format.newVsReturning) as User_type,
-JSON_VALUE(data_json_format.totalUsers) totalUsers,
+JSON_VALUE(data_json_format.totalUsers) totalreturingUsers,
 -- JSON_VALUE(data_json_format.property_id) property_id,
 -- JSON_VALUE(data_json_format.uuid) uuid
 
@@ -48,5 +48,5 @@ FROM Export1._airbyte_raw_customer_retention,
 SELECT *
 FROM first_part_of_data
 JOIN second_part_of_data
-ON first_part_of_data.date = second_part_of_data.date AND first_part_of_data.streamName = second_part_of_data.streamName
+ON first_part_of_data.date1 = second_part_of_data.date2 AND first_part_of_data.streamName1 = second_part_of_data.streamName2
 
