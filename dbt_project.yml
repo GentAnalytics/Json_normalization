@@ -56,6 +56,6 @@ vars:
 # using the `{{ config(...) }}` macro.
 models:
   ga4:
-    +materialized: view
+    +materialized: table
     marts:
       +materialized: table
