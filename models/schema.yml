@@ -1,7 +1,7 @@
 version: 2
 
 models:
-    - name: Json_normalization
+    - name: Json_normalization_1
       description: model with the data of GA4 customer
       columns:
       - name: date
