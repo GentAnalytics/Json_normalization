@@ -19,7 +19,7 @@ first_part_of_data as (
     select
 
 -- PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.month)) as month,
-JSON_VALUE(data_json_format.month) month1,
+JSON_VALUE(data_json_format.yearMonth) yearMonth,
 JSON_VALUE(data_json_format.streamName) streamName,
 JSON_VALUE(data_json_format.sessions) sessions,
 JSON_VALUE(data_json_format.totalUsers) totalUsers,
@@ -35,7 +35,7 @@ from first_json
 second_part_of_data as (
     select
 -- PARSE_DATE('%Y%m%d', JSON_VALUE(data_json_format.month)) as month2,
-JSON_VALUE(data_json_format.month) month2,
+JSON_VALUE(data_json_format.yearMonth) yearMonth2,
 JSON_VALUE(data_json_format.streamName) streamName2,
 -- JSON_VALUE(data_json_format.newVsReturning) as User_type,
 JSON_VALUE(data_json_format.totalUsers) totalReturningUsers
@@ -50,7 +50,7 @@ FROM Export1._airbyte_raw_customer_retention_monthly,
 )
 
 SELECT 
-month1,
+yearMonth,
 streamName,
 sessions,
 totalUsers, 
@@ -59,5 +59,5 @@ newUsers,
 totalReturningUsers
 FROM first_part_of_data
 JOIN second_part_of_data
-ON first_part_of_data.month1 = second_part_of_data.month2 AND first_part_of_data.streamName = second_part_of_data.streamName2
+ON first_part_of_data.yearMonth = second_part_of_data.yearMonth2 AND first_part_of_data.streamName = second_part_of_data.streamName2
 
