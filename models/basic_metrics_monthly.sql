@@ -57,4 +57,4 @@ newUsers,
 totalReturningUsers
 FROM first_part_of_data
 JOIN second_part_of_data
-ON first_part_of_data.YearMonth = second_part_of_data.YearMonth2 AND first_part_of_data.streamName = second_part_of_data.streamName2
+ON (first_part_of_data.YearMonth = second_part_of_data.YearMonth2 AND first_part_of_data.streamName = second_part_of_data.streamName2)
