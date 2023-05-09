@@ -27,8 +27,7 @@ JSON_VALUE(data_json_format.activeUsers) activeUsers,
 JSON_VALUE(data_json_format.newUsers) newUsers,
 -- JSON_VALUE(data_json_format.uuid) uuid,
 -- JSON_VALUE(data_json_format.property_id) property_id
-from first_json
-),
+from first_json),
 
 
 second_part_of_data as (
