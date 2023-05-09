@@ -1,33 +1,24 @@
 version: 2
 
 models:
-    - name: Json_normalization_1
+    - name: basic_metrics_daily
       description: model with the data of GA4 customer
       columns:
       - name: date
         description: unknown
+      - name: streamName
+        description: unknown
       - name: sessions
         description: unknown
-      - name: program_variant
+      - name: totalUsers
         description: unknown
-      - name: pageTitle
+      - name: activeUsers
         description: unknown
-      - name: program_name
+      - name: newUsers
         description: unknown
-      - name: eventName
-        description: unknown
-      - name: video_duration
+      - name: totalReturningUsers
         description : unknown
-      - name: eventName
-        description: unknown
-      - name: video_duration
-        description: unknown
-      - name: uuid
-        description: unknown
-      - name: property_id
-        description: unknown
-      - name: user_id
-        description: unknown
+      
 
 
       
